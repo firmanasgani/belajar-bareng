@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Romeo & Juliet — Wedding Invitation',
+  title: 'Ainul & Dea Wedding Invitation',
   description:
     'You are cordially invited to witness the union of Romeo & Juliet on August 8, 2026. Join us for this galactic celebration of love.',
   openGraph: {
