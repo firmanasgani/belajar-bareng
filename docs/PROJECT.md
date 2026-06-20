@@ -55,7 +55,8 @@ belajar-bareng/
 │   │   │   ├── StarField.tsx          # Animated star background
 │   │   │   ├── SectionWrapper.tsx     # Consistent section padding + fade-in
 │   │   │   ├── CountdownTimer.tsx     # Reusable countdown display
-│   │   │   └── FloatingPlanet.tsx     # Decorative animated planet
+│   │   │   ├── FloatingPlanet.tsx     # Decorative animated planet
+│   │   │   └── TypingText.tsx         # Typewriter effect for text reveal
 │   │   └── layout/
 │   │       ├── Navigation.tsx         # Fixed top nav with scroll detection
 │   │       └── Footer.tsx             # Footer with closing message
@@ -138,6 +139,7 @@ belajar-bareng/
 - Countdown: updates every 1 000 ms via `setInterval`
 - Spaceship: keyframe float animation (up/down, subtle)
 - Hover states: scale 1.02–1.05, glow border
+- Hero title: typewriter effect via `TypingText` — characters revealed one by one with a blinking cursor; Romeo types first (400 ms delay, 80 ms/char), `&` fades in at 900 ms, Juliet follows at 1 000 ms with a persistent cursor
 
 ---
 

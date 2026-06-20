@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import SpaceshipSVG from '@/components/ui/SpaceshipSVG'
 import FloatingPlanet from '@/components/ui/FloatingPlanet'
+import TypingText from '@/components/ui/TypingText'
 import { COUPLE, WEDDING_DATE } from '@/lib/constants'
 import { formatWeddingDate } from '@/lib/utils'
 
@@ -53,22 +54,31 @@ export default function HeroSection() {
             Mission: Forever Together
           </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold leading-tight"
-          >
-            <span className="bg-gradient-to-r from-space-white via-cosmic to-stardust bg-clip-text text-transparent">
-              {COUPLE.partner1}
-            </span>
+          <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <TypingText
+              text={COUPLE.partner1}
+              delay={400}
+              speed={80}
+              className="bg-gradient-to-r from-space-white via-cosmic to-stardust bg-clip-text text-transparent"
+            />
             <br />
-            <span className="text-gold text-4xl md:text-5xl lg:text-6xl font-light">&amp;</span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="text-gold text-4xl md:text-5xl lg:text-6xl font-light"
+            >
+              &amp;
+            </motion.span>
             <br />
-            <span className="bg-gradient-to-r from-stardust via-cosmic to-space-white bg-clip-text text-transparent">
-              {COUPLE.partner2}
-            </span>
-          </motion.h1>
+            <TypingText
+              text={COUPLE.partner2}
+              delay={1000}
+              speed={80}
+              className="bg-gradient-to-r from-stardust via-cosmic to-space-white bg-clip-text text-transparent"
+              cursorPersist
+            />
+          </h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
