@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-void: #05050f;
+  --color-deep-space: #0d0d2b;
+  --color-nebula: #1a1a4e;
+  --color-cosmic: #6c63ff;
+  --color-stardust: #ff6584;
+  --color-gold: #ffd700;
+  --color-silver: #c0c0d0;
+  --color-white: #f0f0ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void);
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  /* Subtle nebula gradient overlay */
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(108, 99, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 101, 132, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.02) 0%, transparent 70%);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-cosmic);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(108, 99, 255, 0.8);
+}
+
+/* Selection highlight */
+::selection {
+  background: rgba(108, 99, 255, 0.3);
+  color: #f0f0ff;
+}
+
+/* Text gradient utility */
+.text-gradient-cosmic {
+  background: linear-gradient(135deg, #c0c0ff, #6c63ff, #ff6584);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(26, 26, 78, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+}
+
+/* Shimmer text animation */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.6) 0%,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 215, 0, 0.6) 50%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 215, 0, 0.6) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerText 4s linear infinite;
+}
+
+@keyframes shimmerText {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Glow pulse for countdown boxes */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(108, 99, 255, 0.25), 0 0 30px rgba(108, 99, 255, 0.1); }
+  50% { box-shadow: 0 0 25px rgba(108, 99, 255, 0.5), 0 0 50px rgba(108, 99, 255, 0.2); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Floating keyframe for planets */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+/* Twinkling stars in CSS (background elements) */
+.star-small {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: twinkle var(--duration, 2s) ease-in-out infinite var(--delay, 0s);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(0.7); }
+}
