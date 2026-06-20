@@ -1,9 +1,9 @@
 export const WEDDING_DATE = new Date('2026-08-08T10:00:00')
 
 export const COUPLE = {
-  partner1: 'Romeo',
-  partner2: 'Juliet',
-  hashtag: '#RomeoAndJulietForever',
+  partner1: 'Ainul',
+  partner2: 'Dea',
+  hashtag: '#AinulAndDeaForever',
 }
 
 export const LOVE_STORY_START = new Date('2022-12-01')
